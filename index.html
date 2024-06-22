@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +7,26 @@
     <title>Password Strength Checker</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="div1">
-        <div class="div2">
-            <h1 class="heading">Want to know if your password <br/> is secure or not?</h1><!--Heading-->
-            <div class="div3"><!--Input box with the buttons  -->
-                <input type="text" name="" id="text" placeholder="Enter password"> 
-                <button id="check" onclick="checker()">Check</button>
-                <button id="generate" onclick="generate()">Generate</button>
-            </div>
-            <div class="div4"> <!-- div having all the information and the parameters of a secure password. -->
-                <li id="res"><span>&#9432</span>&nbsp; A secure password must have atleast one digit, one lower case
-                    character, one upper case character, one special character and should be
-                    atleast 8 characters long</li>
-                <li id="number">&nbsp;</li>
-                <li id="small">&nbsp;</li>
-                <li id="big">&nbsp;</li>
-                <li id="special">&nbsp;</li>
-                <li id="length">&nbsp;</li>
-            </div>
+    <div class="container">
+        <h1 class="heading">Password Strength Checker</h1>
+        <div class="password-form">
+            <input type="text" id="text" placeholder="Enter password">
+            <button id="generate" onclick="generatePassword()">Generate</button>
+        </div>
+        <div class="password-details">
+            <ul>
+                <li id="number">Must have at least one digit</li>
+                <li id="small">Must have at least one lowercase letter</li>
+                <li id="big">Must have at least one uppercase letter</li>
+                <li id="special">Must have at least one special character</li>
+                <li id="length">Must be at least 8 characters long</li>
+            </ul>
+            <p class="crack-time">Estimated crack time: <span id="crack-time-value">Very Short (Less than a Second)</span></p>
+            <p class="password-strength">Password Strength: <span id="password-strength-value">Weak</span></p>
         </div>
     </div>
-</body>
-<script src="index.js"></script>
 
+    <script src="index.js"></script>
+</body>
 </html>
